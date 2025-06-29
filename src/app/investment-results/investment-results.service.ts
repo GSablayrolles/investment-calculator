@@ -37,11 +37,11 @@ export class InvestmentResultsService {
         this.annualData = annualData;
     }
 
-    getUserInputs(initInv: number, dur: number, annInv: number, expRet: number) {
-        this.initialInvestment = initInv;
-        this.duration = dur;
-        this.annualInvestment = annInv;
-        this.expectedReturn = expRet;
+    getUserInputs(data: { initInv: number, dur: number, annInv: number, expRet: number }) {
+        this.initialInvestment = data.initInv;
+        this.duration = data.dur;
+        this.annualInvestment = data.annInv;
+        this.expectedReturn = data.expRet;
 
         this.calculateInvestmentResults();
     }

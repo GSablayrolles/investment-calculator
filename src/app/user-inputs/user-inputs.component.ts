@@ -13,16 +13,18 @@ export class UserInputsComponent {
     private investmentService = inject(InvestmentResultsService) // <=> constructor(...)
 
 
-    initialInvestment = 1000;
-    annualInvestment = 100;
-    expectedReturn = 5;
-    durationTime = 10;
+    initialInvestment = "1000";
+    annualInvestment = "100";
+    expectedReturn = "5";
+    durationTime = "10";
 
     onSubmit() {
-        this.investmentService.getUserInputs(this.initialInvestment,
-            this.durationTime,
-            this.annualInvestment,
-            this.expectedReturn
+        this.investmentService.getUserInputs({
+            initInv: +this.initialInvestment,
+            dur: +this.durationTime,
+            annInv: +this.annualInvestment,
+            expRet: +this.expectedReturn
+        }
         )
 
         console.log(this.investmentService.getInvestmentResults())
