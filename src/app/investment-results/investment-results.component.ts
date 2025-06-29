@@ -1,20 +1,26 @@
 import { Component, inject } from '@angular/core';
 import { InvestmentResultsService } from './investment-results.service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
     selector: 'app-investment-results',
-    imports: [],
+    imports: [CurrencyPipe],
     templateUrl: './investment-results.component.html',
     styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
-    tableHeads = ["Year", "Investment Value", "Interest Year", "Total Interest", "Invested Capital"]
+    tableHeads = ["Year",
+        "Investment Value",
+        "Interest Year",
+        "Total Interest",
+        "Invested Capital"
+    ]
 
-    private investmentService = inject(InvestmentResultsService) // <=> constructor(...)
-
-
+    private investmentService = inject(InvestmentResultsService)
 
     get investmentResults() {
         return this.investmentService.getInvestmentResults();
     }
+
+
 }

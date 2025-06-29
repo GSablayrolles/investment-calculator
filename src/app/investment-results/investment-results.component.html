@@ -8,4 +8,15 @@
             }
         </tr>
     </thead>
+    <tbody>
+        @for (data of investmentResults; track data.year) {
+        <tr>
+            <td>{{data.year}}</td>
+            <td>{{data.valueEndOfYear | currency : "EUR"}}</td>
+            <td>{{data.interest | currency : "EUR"}}</td>
+            <td>{{data.totalInterest | currency : "EUR"}}</td>
+            <td>{{data.totalAmountInvested | currency : "EUR"}}</td>
+        </tr>
+        }
+    </tbody>
 </table>

@@ -34,7 +34,7 @@ export class InvestmentResultsService {
             });
         }
 
-        return annualData;
+        this.annualData = annualData;
     }
 
     getUserInputs(initInv: number, dur: number, annInv: number, expRet: number) {
