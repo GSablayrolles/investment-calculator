@@ -19,6 +19,7 @@ export class InvestmentResultsComponent {
     private investmentService = inject(InvestmentResultsService)
 
     get investmentResults() {
+        console.log(this.investmentService.getInvestmentResults())
         return this.investmentService.getInvestmentResults();
     }
 

@@ -1,4 +1,5 @@
-<table>
+@if (investmentResults.length !== 0) {<table>
+
     <thead>
         <tr>
             @for (head of tableHeads; track head) {
@@ -20,3 +21,9 @@
         }
     </tbody>
 </table>
+}
+@else {
+<h4>
+    Please enter some values and press "Calculate"
+</h4>
+}
