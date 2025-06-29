@@ -1,6 +1,8 @@
-# EssentialsPractice
+# Investment Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-next.2.
+## Project
+
+My first project to learn Angular and standalone component based. I also use service to pass through data and manipulate them
 
 ## Development server
 
